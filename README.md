@@ -18,7 +18,6 @@ As bases de dados utilizadas neste projeto são provenientes de um **problema de
 Como solução para coleta e armazenamento, as tabelas foram convertidas para o formato CSV e carregadas em um bucket do Google Cloud Platform (GCP).
 *Vide anexo "2.Coleta e Upload Bucket GCP".*
 
-
 ### 3. Modelagem: ###
 Para a modelagem dos dados, foi adotado o modelo dimensional do tipo **Star Schema**, utilizando o campo "contrato" como chave primária para a integração entre a tabela fato e as dimensões:
   - Tabela Fato: fato_cyber
@@ -28,6 +27,15 @@ Para a modelagem dos dados, foi adotado o modelo dimensional do tipo **Star Sche
 
 ### 4. Carga: ###
 As etapas do ETL são:
+- 4.1. Criação do Bucket:
+
+- 4.2. Upload Dos Dados em CSV:
+
+- *4.3. Transformação:  Não foi necessário realizar transformações nos dados, uma vez que já estavam padronizados e prontos para uso.*
+
+- 4.4. Criação Tabelas no Data Warehouse:
+
+- 4.5. Execução de Conciliação:
 
 
 ### 5. Análise: ###
