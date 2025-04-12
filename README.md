@@ -16,7 +16,6 @@ As bases de dados utilizadas neste projeto são provenientes de um **problema de
 
 ### 2. Coleta: ###
 Como solução para coleta e armazenamento, as tabelas foram convertidas para o formato CSV e carregadas em um bucket do Google Cloud Platform (GCP).
-*Vide anexo "2.Coleta e Upload Bucket GCP".*
 
 ### 3. Modelagem: ###
 Para a modelagem dos dados, foi adotado o modelo dimensional do tipo **Star Schema**, utilizando o campo "contrato" como chave primária para a integração entre a tabela fato e as dimensões:
@@ -28,15 +27,31 @@ Para a modelagem dos dados, foi adotado o modelo dimensional do tipo **Star Sche
 ### 4. Carga: ###
 As etapas do ETL são:
 - 4.1. Criação do Bucket:
+<div align="center">
+<img src="https://github.com/user-attachments/assets/4271ec66-9322-406b-9887-4f6f0190d8b3" width="700px" />
+</div>
 
 - 4.2. Upload Dos Dados em CSV:
+<div align="center">
+<img src="https://github.com/user-attachments/assets/4a71c1ac-90c2-4a94-bb83-64f9932a3b1e" width="700px" />
+</div>
 
 - *4.3. Transformação:  Não foi necessário realizar transformações nos dados, uma vez que já estavam padronizados e prontos para uso.*
 
 - 4.4. Criação Tabelas no Data Warehouse:
+<div align="center">
+<img src="https://github.com/user-attachments/assets/4a71c1ac-90c2-4a94-bb83-64f9932a3b1e" width="700px" />
+</div>
 
 - 4.5. Execução de Conciliação:
+<div align="center">
+<img src="https://github.com/user-attachments/assets/dd76b308-22c3-41c4-9866-107acfe00e84" width="700px" />
+</div>
 
+
+<div align="center">
+<img src="https://github.com/user-attachments/assets/02aae33f-c60f-4ae9-aa33-8dc9207a84e5" width="700px" />
+</div>
 
 ### 5. Análise: ###
 - a. Qualidade dos dados:
