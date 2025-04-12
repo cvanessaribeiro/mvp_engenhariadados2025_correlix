@@ -7,7 +7,8 @@ O **Projeto Corelix** tem como objetivo identificar oportunidades estratégicas 
 
 
 ## Plataforma Utilizada ##
-- Google Cloud Plataform.
+- Google Cloud Plataform **(GCP)**;
+- SQL.
 
 
 ## Detalhamento ##
@@ -22,7 +23,11 @@ Para a modelagem dos dados, foi adotado o modelo dimensional do tipo **Star Sche
   - Tabela Fato: fato_cyber
   - Tabelas Dimensão: dim_produto, dim_bloqueio, dim_cyner
 
-    + Catálogo de Dados*****
+### 3.1 Catálogo Dados ###
+<div align="center">
+<img src="https://github.com/user-attachments/assets/bec530ab-df54-4ab4-9764-93a17eb94ae6" width="700px" />
+</div>
+
 
 ### 4. Carga: ###
 As etapas do ETL são:
@@ -39,8 +44,9 @@ As etapas do ETL são:
 - *4.3. Transformação:  Não foi necessário realizar transformações nos dados, uma vez que já estavam padronizados e prontos para uso.*
 
 - 4.4. Criação Tabelas no Data Warehouse:
+ O passo a passo apresentado na imagem refere-se à criação da tabela dim_bloqueio e foi utilizado como base para estruturar as demais tabelas do modelo.
 <div align="center">
-<img src="https://github.com/user-attachments/assets/4a71c1ac-90c2-4a94-bb83-64f9932a3b1e" width="700px" />
+<img src="https://github.com/user-attachments/assets/b0326d38-eda2-4a76-8b00-57722ad6b882" width="700px" />
 </div>
 
 - 4.5. Execução de Conciliação:
