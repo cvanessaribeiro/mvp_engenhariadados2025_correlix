@@ -16,6 +16,8 @@ As bases de dados utilizadas neste projeto são provenientes de um **problema de
 
 ### 2. Coleta: ###
 Como solução para coleta e armazenamento, as tabelas foram convertidas para o formato CSV e carregadas em um bucket do Google Cloud Platform (GCP).
+2. Coleta e Upload Bucket GCP.png
+
 
 ### 3. Modelagem: ###
 Para a modelagem dos dados, foi adotado o modelo dimensional do tipo **Star Schema**, utilizando o campo "contrato" como chave primária para a integração entre a tabela fato e as dimensões:
