@@ -16,7 +16,7 @@ As bases de dados utilizadas neste projeto são provenientes de um **problema de
 
 ### 2. Coleta: ###
 Como solução para coleta e armazenamento, as tabelas foram convertidas para o formato CSV e carregadas em um bucket do Google Cloud Platform (GCP).
-2. Coleta e Upload Bucket GCP.png
+*Vide anexo "2.Coleta e Upload Bucket GCP".*
 
 
 ### 3. Modelagem: ###
