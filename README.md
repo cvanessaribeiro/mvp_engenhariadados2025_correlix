@@ -16,12 +16,20 @@ O **Projeto Corelix** tem como objetivo identificar oportunidades estratégicas 
 As bases de dados utilizadas neste projeto são provenientes de um **problema de negócio real** relacionado ao setor de cobrança de uma empresa.
 
 ### 2. Coleta: ###
-Como solução para coleta e armazenamento, as tabelas foram convertidas para o formato CSV e carregadas em um bucket do Google Cloud Platform (GCP).
+Para a coleta e armazenamento dos dados, foi utilizada a plataforma **Google Cloud Platform (GCP)**, aproveitando seus serviços gerenciados e escaláveis.
+As bases de dados, originalmente extraídas de sistemas internos da empresa (relacionadas ao setor de cobrança), foram exportadas em formato CSV, garantindo compatibilidade e facilidade de manipulação inicial.
 
 ### 3. Modelagem: ###
-Para a modelagem dos dados, foi adotado o modelo dimensional do tipo **Star Schema**, utilizando o campo "contrato" como chave primária para a integração entre a tabela fato e as dimensões:
-  - Tabela Fato: fato_cyber
-  - Tabelas Dimensão: dim_produto, dim_bloqueio, dim_cyner
+Para a modelagem dos dados, foi adotado o modelo dimensional do tipo **Star Schema**, por sua simplicidade e desempenho em consultas analíticas.
+
+Estrutura do Esquema Estrela:
+- **Tabela Fato:**
+  - fato_cyber (PK = "Contrato").
+
+- **Tabelas Dimensão:**
+  - dim_produto (FK = "Contrato");
+  - dim_bloqueio (FK = "Contrato");
+  - dim_cyner (FK = "Contrato");
 
 ### 3.1 Catálogo Dados ###
 <div align="center">
@@ -30,13 +38,18 @@ Para a modelagem dos dados, foi adotado o modelo dimensional do tipo **Star Sche
 
 
 ### 4. Carga: ###
-As etapas do ETL são:
-- 4.1. Criação do Bucket:
+Como solução de armazenamento, foi criado um bucket no Google Cloud Storage, estruturado em pastas para organização por data e categoria de dado. Essa organização segue boas práticas de data lake, facilitando versionamento e governança. 
+Além disso:
+- A ingestão inicial dos arquivos foi realizada de forma manual, adequada para a fase MVP;
+- Os dados passaram por validação básica de integridade e formato antes do carregamento no bucket.
+
+As etapas são:
+- 4.1. Criação do Bucket: 
 <div align="center">
 <img src="https://github.com/user-attachments/assets/4271ec66-9322-406b-9887-4f6f0190d8b3" width="700px" />
 </div>
 
-- 4.2. Upload Dos Dados em CSV:
+- 4.2. Upload Dos Dados em CSV: Durante o MVP, os arquivos CSV foram carregados manualmente no bucket, visando facilitar a prototipação.
 <div align="center">
 <img src="https://github.com/user-attachments/assets/4a71c1ac-90c2-4a94-bb83-64f9932a3b1e" width="700px" />
 </div>
